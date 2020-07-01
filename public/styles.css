@@ -71,4 +71,6 @@ header {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    box-shadow: 4px 4px 20px 0 black; /*x, y, blur, spread*/
 }

@@ -72,5 +72,20 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    box-shadow: 4px 4px 20px 0 black; /*x, y, blur, spread*/
+    box-shadow: 4px 4px 20px 0 black; /* x, y, blur, spread */
+
+    animation-name: up; /* eu que dou o nome */
+    animation-duration: 200ms;
+    animation-timing-function: ease-out;
+}
+
+/* Acessando a animação */
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+    }
 }

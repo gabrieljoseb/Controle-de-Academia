@@ -12,6 +12,9 @@ exports.post = (req, res) => {
             return res.send('please, fill all fields')
     }
 
+    req.body.birth = Date.parse(req.body.birth)
+    req.body.created_in = Date.now()
+
     data.instructors.push(req.body)
 
     fs.writeFile('data.json', JSON.stringify(data, null, 2), (err) => {

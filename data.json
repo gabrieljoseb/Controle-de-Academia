@@ -1,1 +1,11 @@
-{"avatar_url":"http://google.com","name":"Gabriel José Ribeiro Corrêa de Sá Benevides","birth":"1998-05-23","gender":"M","services":"crossfit, musculação"}
+{
+  "instructors": [
+    {
+      "avatar_url": "http://google.com",
+      "name": "Gabriel José Ribeiro Corrêa de Sá Benevides",
+      "birth": "1998-05-08",
+      "gender": "M",
+      "services": "crossfit, musculação"
+    }
+  ]
+}

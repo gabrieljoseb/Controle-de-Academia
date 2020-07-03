@@ -13,7 +13,7 @@ exports.show = (req, res) => {
     if (!foundInstructor)
         return res.send('Instructor not found!')
 
-    return res.send(foundInstructor)
+    return res.render('instructors/show', { instructor: foundInstructor })
 }
 
 // create
@@ -34,7 +34,7 @@ exports.post = (req, res) => {
     const id = Number(data.instructors.length + 1)
 
     data.instructors.push({
-        id, 
+        id,
         avatar_url,
         name,
         birth,

@@ -82,14 +82,8 @@ exports.edit = (req, res) => {
 // put
 exports.put = (req, res) => {
     const { id } = req.body
-    let index = 0
 
-    const foundInstructor = data.instructors.find((instructor, foundIndex) => {
-        if (id == instructor.id) {
-            index = foundIndex
-            return true
-        }
-    })
+    const foundInstructor = data.instructors.find((instructor) => id == instructor.id)
     
     if (!foundInstructor) return res.send('instructor not found!')
 
@@ -98,9 +92,8 @@ exports.put = (req, res) => {
         ...req.body,
         birth: Date.parse(req.body.birth)
     }
-    console.log(id)
-    console.log(index)
-    data.instructors[index] = instructor
+
+    data.instructors[id - 1] = instructor
 
     fs.writeFile('data.json', JSON.stringify(data, null, 2), (err) => {
         if (err) return res.send('Write error!')

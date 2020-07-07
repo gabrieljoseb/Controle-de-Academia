@@ -13,8 +13,9 @@ module.exports = {
         return age
     },
     date: (timestamp) => {
-        const date = new Date(timestamp).getUTCDate()
-
-        return new Intl.DateTimeFormat().format(date)
+        const stringDate = new Date(timestamp).toISOString()
+        const date = stringDate.split('T')[0]
+        
+        return date
     }
 }

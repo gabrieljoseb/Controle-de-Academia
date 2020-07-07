@@ -84,7 +84,7 @@ exports.put = (req, res) => {
     const { id } = req.body
 
     const foundInstructor = data.instructors.find((instructor) => id == instructor.id)
-    
+
     if (!foundInstructor) return res.send('instructor not found!')
 
     const instructor = {
@@ -99,5 +99,22 @@ exports.put = (req, res) => {
         if (err) return res.send('Write error!')
 
         return res.redirect(`/instructors/${id}`)
+    })
+}
+
+// delete
+exports.delete = (req, res) => {
+    const { id } = req.body
+    
+    const filteredInstructors = data.instructors.filter((instructor) => {
+        return instructor.id != id
+    })
+
+    data.instructors = filteredInstructors
+
+    fs.writeFile("data.json", JSON.stringify(data, null, 2), (err) => {
+        if (err) return res.send('Write file error!')
+
+        return res.redirect('/instructors')
     })
 }

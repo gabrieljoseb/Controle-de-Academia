@@ -2,7 +2,7 @@
   "instructors": [
     {
       "id": 1,
-      "avatar_url": "https://source.unsplash.com/collection/517198/300x400",
+      "avatar_url": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "name": "Gabriel José Ribeiro",
       "birth": 926121600000,
       "gender": "M",
@@ -11,7 +11,7 @@
     },
     {
       "id": 2,
-      "avatar_url": "https://source.unsplash.com/collection/517198/300x400",
+      "avatar_url": "https://images.unsplash.com/photo-1550345332-09e3ac987658?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "name": "Caroline Lacerda",
       "birth": 941587200000,
       "gender": "F",

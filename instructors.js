@@ -3,6 +3,11 @@ const data = require('./data.json')
 const Intl = require('intl')
 const { age, date } = require('./utils')
 
+// index
+exports.index = (req, res) => {
+    return res.render("instructors/index", { instructors: data.instructors })
+}
+
 // show
 exports.show = (req, res) => {
     // req.params
@@ -105,7 +110,7 @@ exports.put = (req, res) => {
 // delete
 exports.delete = (req, res) => {
     const { id } = req.body
-    
+
     const filteredInstructors = data.instructors.filter((instructor) => {
         return instructor.id != id
     })

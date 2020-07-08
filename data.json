@@ -1,3 +1,22 @@
 {
-  "instructors": []
+  "instructors": [
+    {
+      "id": 1,
+      "avatar_url": "https://source.unsplash.com/collection/517198/300x400",
+      "name": "Gabriel José Ribeiro",
+      "birth": 926121600000,
+      "gender": "M",
+      "services": "crossfit, musculação",
+      "created_in": 1594210660912
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://source.unsplash.com/collection/517198/300x400",
+      "name": "Caroline Lacerda",
+      "birth": 941587200000,
+      "gender": "F",
+      "services": "crossfit, musculação, tênis",
+      "created_in": 1594210691887
+    }
+  ]
 }

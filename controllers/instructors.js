@@ -1,14 +1,12 @@
 const fs = require('fs')
-const data = require('./data.json')
+const data = require('../data.json')
 const Intl = require('intl')
-const { age, date } = require('./utils')
+const { age, date } = require('../utils')
 
-// index
 exports.index = (req, res) => {
     return res.render("instructors/index", { instructors: data.instructors })
 }
 
-// show
 exports.show = (req, res) => {
     // req.params
     const { id } = req.params
@@ -30,7 +28,10 @@ exports.show = (req, res) => {
     return res.render('instructors/show', { instructor })
 }
 
-// create
+exports.create = (req, res) => {
+    return res.render('instructors/create')
+}
+
 exports.post = (req, res) => {
 
     // pega todos os objetos em array do campo "name" do input, ex: ["avatar_url", "name", "birth"]
@@ -64,7 +65,6 @@ exports.post = (req, res) => {
     })
 }
 
-// edit
 exports.edit = (req, res) => {
     // req.params
     const { id } = req.params
@@ -84,7 +84,6 @@ exports.edit = (req, res) => {
     return res.render('instructors/edit', { instructor })
 }
 
-// put
 exports.put = (req, res) => {
     const { id } = req.body
 
@@ -108,7 +107,6 @@ exports.put = (req, res) => {
     })
 }
 
-// delete
 exports.delete = (req, res) => {
     const { id } = req.body
 

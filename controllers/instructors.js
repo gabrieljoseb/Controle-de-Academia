@@ -7,27 +7,6 @@ exports.index = (req, res) => {
     return res.render("instructors/index", { instructors: data.instructors })
 }
 
-exports.show = (req, res) => {
-    // req.params
-    const { id } = req.params
-
-    const foundInstructor = data.instructors.find((instructor) => {
-        return instructor.id == id
-    })
-
-    if (!foundInstructor)
-        return res.send('Instructor not found!')
-
-    const instructor = {
-        ...foundInstructor,
-        age: age(foundInstructor.birth),
-        services: foundInstructor.services.split(','),
-        created_in: new Intl.DateTimeFormat("pt-BR").format(foundInstructor.created_in)
-    }
-
-    return res.render('instructors/show', { instructor })
-}
-
 exports.create = (req, res) => {
     return res.render('instructors/create')
 }
@@ -65,6 +44,27 @@ exports.post = (req, res) => {
     })
 }
 
+exports.show = (req, res) => {
+    // req.params
+    const { id } = req.params
+
+    const foundInstructor = data.instructors.find((instructor) => {
+        return instructor.id == id
+    })
+
+    if (!foundInstructor)
+        return res.send('Instructor not found!')
+
+    const instructor = {
+        ...foundInstructor,
+        age: age(foundInstructor.birth),
+        services: foundInstructor.services.split(','),
+        created_in: new Intl.DateTimeFormat("pt-BR").format(foundInstructor.created_in)
+    }
+
+    return res.render('instructors/show', { instructor })
+}
+
 exports.edit = (req, res) => {
     // req.params
     const { id } = req.params
@@ -78,7 +78,7 @@ exports.edit = (req, res) => {
 
     const instructor = {
         ...foundInstructor,
-        birth: date(foundInstructor.birth)
+        birth: date(foundInstructor.birth).date
     }
 
     return res.render('instructors/edit', { instructor })

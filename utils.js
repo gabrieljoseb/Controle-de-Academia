@@ -15,7 +15,14 @@ module.exports = {
     date: (timestamp) => {
         const stringDate = new Date(timestamp).toISOString()
         const date = stringDate.split('T')[0]
+
+        const day = stringDate.slice(8, 10)
+        const month = stringDate.slice(5, 7)
+        const year = stringDate.slice(0, 4)
         
-        return date
+        return {
+            date,
+            birthday: `${day}/${month}`
+        }
     }
 }

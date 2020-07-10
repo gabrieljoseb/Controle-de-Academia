@@ -1,15 +1,15 @@
 {
   "members": [
     {
+      "id": 1,
       "avatar_url": "https://source.unsplash.com/collection/517198/300x400",
-      "name": "Gabriel José ",
+      "name": "Gabriel José",
       "email": "gjose.benevides@gmail.com",
       "birth": 894585600000,
       "gender": "M",
-      "blood": "O1",
+      "blood": "O+",
       "weight": "75",
-      "height": "173",
-      "id": 1
+      "height": "173"
     }
   ],
   "instructors": [

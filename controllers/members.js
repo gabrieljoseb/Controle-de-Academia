@@ -7,24 +7,6 @@ exports.index = (req, res) => {
     return res.render("members/index", { members: data.members })
 }
 
-exports.show = (req, res) => {
-    const { id } = req.params
-
-    const foundMember = data.members.find((member) => {
-        return member.id == id
-    })
-
-    if (!foundMember)
-        return res.send('Member not found!')
-
-    const member = {
-        ...foundMember,
-        age: age(foundMember.birth),
-    }
-
-    return res.render('members/show', { member })
-}
-
 exports.create = (req, res) => {
     res.render('members/create')
 }
@@ -57,6 +39,24 @@ exports.post = (req, res) => {
 
         return res.redirect(`/members/${id}`)
     })
+}
+
+exports.show = (req, res) => {
+    const { id } = req.params
+
+    const foundMember = data.members.find((member) => {
+        return member.id == id
+    })
+
+    if (!foundMember)
+        return res.send('Member not found!')
+
+    const member = {
+        ...foundMember,
+        age: age(foundMember.birth),
+    }
+
+    return res.render('members/show', { member })
 }
 
 exports.edit = (req, res) => {

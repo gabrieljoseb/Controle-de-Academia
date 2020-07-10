@@ -61,7 +61,7 @@ exports.post = (req, res) => {
     fs.writeFile('data.json', JSON.stringify(data, null, 2), (err) => {
         if (err) return res.send("Error writting file!")
 
-        return res.redirect("/instructors")
+        return res.redirect(`/instructors/${id}`)
     })
 }
 

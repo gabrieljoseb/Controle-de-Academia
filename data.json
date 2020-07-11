@@ -10,6 +10,17 @@
       "blood": "O-",
       "weight": "90",
       "height": "220"
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://source.unsplash.com/collection/517198/300x400",
+      "name": "Caroline Lacerda",
+      "email": "carolacerda03@gmail.com",
+      "birth": 944179200000,
+      "gender": "F",
+      "blood": "AB+",
+      "weight": "60",
+      "height": "162"
     }
   ],
   "instructors": [
